@@ -45,4 +45,19 @@ class ProductRepositoryTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
+
+    @Test
+    public void shouldRemoveNonExistingElement() {
+        ProductRepository repo = new ProductRepository();
+
+        repo.save(good1);
+        repo.save(good2);
+        repo.save(good3);
+        repo.save(good4);
+        repo.save(good5);
+
+        Assertions.assertThrows(NotFoundException.class, () -> {
+            repo.removeById(286);
+        });
+    }
 }

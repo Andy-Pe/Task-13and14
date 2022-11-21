@@ -8,4 +8,14 @@ public class Smartphone extends Product {
         super(id, name, price);
         this.manufacturer = manufacturer;
     }
+
+    @Override
+    public boolean matches(Product product, String search) {
+        if(product.matches(product, search)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
+

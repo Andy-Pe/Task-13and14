@@ -14,7 +14,7 @@ public class ProductRepository {
 
     public void removeById(int id) {
         if (findById(id) != null) {
-            System.out.println("Element with id: " + id + " found");
+            System.out.println("Element with id: " + id + " deleted");
         } else {
             throw new NotFoundException(
                     "Element with id: " + id + " not found"

@@ -60,4 +60,13 @@ class ProductRepositoryTest {
             repo.removeById(286);
         });
     }
+
+//    @Test
+//    public void shouldAddAlreadyExistElement() {
+//        ProductRepository repo = new ProductRepository();
+//
+//        Assertions.assertThrows(AlreadyExistsException.class, () -> {
+//            repo.save(good2);
+//        });
+//    }
 }
